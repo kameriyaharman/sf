@@ -1,0 +1,351 @@
+
+/*------------------------------------------------------------ # 
+Navigation Menu 
+--------------------------------------------------------------*/
+.main-nav, .main-nav * {list-style: none;}
+.main-nav > ul > li {position: relative;white-space: nowrap;float: left;}
+.main-nav a, .main-nav select {color:var(--blackColor);padding: 3px 20px;font-size: 15px;font-family: KumbhSans-Medium;}
+.main-nav select option{color: var(--blackColor);}
+.main-nav a.active,  .main-nav ul a.active, .main-nav li:hover > a {color: var(--yellowColor);}
+.main-nav .drop-down ul {display: block;position: absolute;right: 0;top: calc(100% + 30px);z-index: 99;opacity: 0;visibility: hidden;padding: 10px 0;background: #fff;box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);transition: ease all 0.3s;margin-top: 10px;}
+.main-nav .drop-down:hover > ul {opacity: 1;top: 100%;visibility: visible;}
+.main-nav .drop-down li {min-width: 180px;position: relative;}
+.main-nav .drop-down ul a {padding: 4px 20px; font-size: 14px; color: var(--blackColor); display: block;}
+.main-nav .drop-down ul a:hover, .main-nav .drop-down ul .active > a, .main-nav .drop-down ul li:hover > a {background-color:var(--color-red);color: #fff}
+.main-nav .drop-down > a:after {border: none!important;font: normal normal normal 14px/1 FontAwesome;content: "\f107"!important;vertical-align: 0;padding-left: 6px;}
+.main-nav .drop-down:hover .main-nav .drop-down > a:before{border: none!important;font: normal normal normal 14px/1 FontAwesome;content: "\f106"!important;vertical-align: 0;}
+.main-nav .drop-down .drop-down ul {top: 0;left: calc(100% - 30px);}
+.main-nav .drop-down .drop-down:hover > ul {opacity: 1;top: 0;left: 100%;}
+.main-nav .drop-down .drop-down > a {padding-right: 35px;}
+.main-nav .drop-down .drop-down > a:after {content: "\f105";position: absolute;right: 15px;}
+.main-nav ul li:nth-last-child(1) a{padding-right: 0px;}
+/* Mobile Navigation */
+.mobile-nav {position: fixed;top: 0;bottom: 0;z-index: 3333;overflow-y: auto;right: -290px;width: 290px;padding-top: 18px;background: #fff;transition: 0.4s;}
+.mobile-nav * {list-style: none;}
+.mobile-nav a{display: block;position: relative;color: var(--blackColor);padding: 10px 20px;font-size: 13px;font-family: KumbhSans-Bold;border-bottom: 1px solid;border-color: #f1f1f1}
+.mobile-nav a:focus, .mobile-nav a.active, .mobile-nav .drop-down.active,  .mobile-nav a:hover{color: var(--yellowColor);}
+.mobile-nav .drop-down li a:hover{background-color:#ab1899;color:  #fff;}
+.mobile-nav .drop-down > a:after {right: 15px;top: 13px;position: absolute; content: "\f067";border: none!important;font: normal normal normal 14px/1 FontAwesome;vertical-align: 0;}
+.mobile-nav .drop-down.active > a:after {content: "\f068" !important;}
+.mobile-nav .drop-down > a {padding-right: 35px;}
+.mobile-nav .drop-down.active{color: #fff}
+.mobile-nav .drop-down ul {display: none;overflow: hidden;}
+.mobile-nav .drop-down li a{padding-left: 25px;color: #fff}
+.mobile-nav-overly {width: 100%;height: 100%;z-index: 2222;top: 0;left: 0;position: fixed;background: rgba(0, 0, 0, 0.7);overflow: hidden;display: none;}
+.mobile-nav-active {overflow: hidden;}
+.mobile-nav-active .mobile-nav {right: 0;}
+.mobile-nav-active .mobile-nav-toggle i {color: #fff;font-size: 30px;}
+.mobile-nav-toggle .fa-bars {font-size: 24px;}
+
+/*navbar END*/
+.modal-backdrop{z-index: 33334}
+.modal{z-index: 33335}
+.logo-top{height: 60px;}
+.headerNav {height: 70px;z-index: 999;transition: all 0.9s;display: flex;align-items: center;}
+.navbarScroll{position: sticky;z-index: 2222;top: 0px;background-color: var(--yellowLightColor);}
+.fixedHeader{background-color: var(--yellowLightColor);box-shadow: 0px 0px 5px rgba(127, 137, 161, 0.3);}
+/*-------------------------------------------------------------- # 
+maintop sliders
+--------------------------------------------------------------*/
+
+/* ----------  CommanCss -------------*/
+.defaultPaddingTB{ padding-top: 60px;padding-bottom: 60px;}
+/* -------end------- */
+
+
+
+
+
+
+
+
+.HometopBg{ min-height: 400px; background-position: center; background-size: cover; } 
+.HometopBg h1{ font-size: 58px; font-family: KumbhSans-Bold; }
+.HometopBg p{ font-size: 17px; font-family: KumbhSans-Medium;color: var(--grayColor); margin-top: 20px;} 
+.HometopBg img{height: 350px;object-fit: cover; border-radius: 5px;}
+.HometopBg{
+    background-image: url("../image/HometopBg.png");
+}
+.YouTubeVideo{ width: 100%; min-height: 400px; }
+
+.videoPlayIcon{ position: absolute; cursor: pointer; z-index: 3; background-color: unset; border: none; } 
+.videoPlayIcon img{ height: 80px; }
+.videoPlayIcon img:hover{background-color: var(--NavyBlueColor);border-radius: 50%;}
+.videoPlayOveary::after{ position: absolute; content: ""; top: 0px; bottom: 0px; right: 0px; left: 0px; background-color: #00000080; border-radius: 20px; } 
+.videoPlayOveary{ display: flex; align-items: center; justify-content: center; position: relative; } 
+
+.PrayersTemple{ background-color: #fff; } 
+.PrayersTemple h1{ font-size: 33px; font-family: KumbhSans-Bold;margin-bottom: 20px; } 
+.PrayersTemple p{ font-size: 16px; font-family: KumbhSans-Medium;color: var(--grayColor); margin-top: 10px;  }
+.PrayersTemple img{border-radius : 5px;}
+
+.youtubeModal .Modal_btn-close{position: absolute; right: -23px; background: var(--yellowColor); color: white; opacity: 1; top: -13px; border-radius: 50%; display: flex; align-items: center; justify-content: center; height: 20px; width: 20px; z-index: 1;}
+.youtubeModal .Modal_btn-close:hover{background-color: var(--NavyBlueColor);color: white;}
+
+
+/* ---------- BenefitsSection start--------- */
+.BenefitsSection{ background-color: var(--yellowLightColor);padding: 50px 0px; } 
+.BenefitsSection img{ border-radius: 5px; } 
+.BenefitsSection h1{ font-size: 35px; font-family: KumbhSans-Bold; color: #000;padding-bottom: 30px; } 
+.benefits_CardM{ border-right: 1px solid #D9D9D9;} 
+.BenefitsSection .benefitsCard{ padding: 25px 25px 25px 0px; display: flex; align-items: center; position: relative; border-top: 1px solid #D9D9D9}
+.BenefitsSection .benefitsCard h3{ font-size: 21px; font-family: KumbhSans-Bold; color: #000; } 
+.BenefitsSection .benefitsCard p{font-size: 16px; font-family: KumbhSans-Medium; color: #393939; margin-top: 16px;  } 
+/* -----end------- */
+
+
+
+/* --------userAreStart------- */
+.CustomersSayingText h1{ font-size: 50px; font-family: KumbhSans-Bold; } 
+.CustomersSayingText p{ font-size: 15px; font-family: KumbhSans-Medium;color: var(--grayColor); margin-top: 16px;color: var(--grayColor); } 
+
+.CustomersSaying .customerUserProfile{ height: 250px; width: 100%; border-radius: 20px; position: relative; } 
+.CustomersSaying p{margin-top: 20px;font-size: 14px;line-height: 21px;}
+.CustomersSaying h3{margin-top: 15px;font-size: 18px;font-family: KumbhSans-SemiBold;}
+.CustomersSaying h6{margin-top: 5px;font-size: 14px}
+
+/* marquee */
+.marqueeNew{ background-color: var(--yellowColor);border: 1px solid #ccc; display: flex; }
+.marqueeNew ul li{ display: inline-block; padding: 15px 20px; font-size: 31px; font-family: KumbhSans-Medium; } 
+.marqueeNew ul li img{height: 30px;}
+
+.OurProductSection{ background-color: var(--yellowLightColor); } 
+.Our_Product h2 { font-size: 23px; font-family: KumbhSans-Bold;text-align: center;  } 
+.Our_Product h3 { font-size: 17px; font-family: KumbhSans-Bold;text-align: center; } 
+.Our_Product .productImg{border-radius: 20px;background-color: var(--yellowLightColor) !important;}
+.Our_Product .productImg img{ height: 250px; border-radius: 20px; position: relative; } 
+
+.ratingStar{ color: #ffaa00; } 
+.ratingStar:hover{color: var(--NavyBlueColor);}
+
+
+.whySamridhiFramesimgOveraly{position: relative;overflow: hidden;display: flex;align-items: center;justify-content: flex-end;}
+.whySamridhiFramesimgOveraly img{position: relative;}
+.whySamridhiFramesimgOveraly::before {position: absolute; content: ""; width: 400px; height: 100%;  right: 0px; top: 100px; border-top-right-radius: 220px; border-top-left-radius: 220px;}
+
+.whySamridhiFrames{background-color: white;}
+.whySamridhiFrames h1{ font-size: 36px; font-family: KumbhSans-Bold; }
+.whySamridhiFrames p{ font-size: 15px; font-family: KumbhSans-Medium;color: var(--grayColor); margin-top: 20px;line-height: 25px;} 
+
+
+.whySamridhiFramesSlider{ margin-top: 30px; } 
+.whySamridhiFramesSlider .swiper-wrapper{ padding-bottom: 50px; } 
+.whySamridhiFramesSlider img{ height: 50px; } 
+.whySamridhiFramesSlider h5 {font-size: 18px; font-family: KumbhSans-Bold;margin-top: 10px;line-height: 23px;color: var(--yellowColor); }
+.whySamridhiFramesSlider p { color: var(--grayColor); font-size: 14px; font-family: KumbhSans-Medium; line-height: 21px;margin-top: 10px}
+
+
+.swiper-pagination-bullet{ background-color: var(--NavyBlueColor) !important; } 
+
+
+.HowRidhiFramsWorksMain{background-image: url('../image/WorksBackground.png');background-position: bottom;background-size: 100% 60%;background-repeat: no-repeat;}
+.HowRidhiFramsWorks{ display: flex; align-items: center; justify-content: center; position: relative; } 
+.HowRidhiFramsWorks::after{ position: absolute; content: ""; top: 0px; bottom: 0px; right: 0px; left: 0px; background-color: #00000080; border-radius: 20px; } 
+.HowRidhiFramsWorks img{border-radius: 20px;}
+
+
+/* ------frequelty Asked------- */
+.frequeltyAsked{ background-color: var(--yellowLightColor) } 
+.frequeltyAsked h1 { font-size: 36px; font-family: KumbhSans-Bold; text-align: center; color: black; } 
+.frequeltyAsked .accordion-item p { color: black; font-size: 15px; font-family: KumbhSans-Medium; line-height: 25px;} 
+.frequeltyAsked .accordion-button{  color: black; font-size: 24px;font-family: KumbhSans-Medium;padding-right: 28px;padding-left: 44px; background-color: var(--yellowLightColor);} 
+.frequeltyAsked .accordion-button:not(.collapsed){border-radius: 20px 20px 0px 0px;box-shadow: none;} 
+.frequeltyAsked .accordion-item{ border-right: none; border-left: none; border-bottom: 1px solid #D9D9D9;background-color: unset; } 
+.frequeltyAsked .accordion-button::after{ background-image: url('../image/arrowUp.png'); width: 19px;height: 15px;background-size: 19px;position: absolute;right: 10px;top: 20px; } 
+/* .frequeltyAsked .accordion-button:not(.collapsed)::after{ background-image: url('../image/arrowDown.png'); }  */
+.frequeltyAsked button:focus:not(:focus-visible){box-shadow: none;}
+.frequeltyAsked .userAreProMain::after{border-radius: 12px;}
+.frequeltyAsked .frequltyNumber{position: absolute;left: 15px;top: 15px;}
+
+
+.makeAStrong{background-image: url("../image/bg.png"); min-height: 400px; background-position: center; background-size: cover; display: flex;align-items: center;justify-content: center;} 
+.makeAStrong h1{ font-size: 60px; font-family: KumbhSans-Bold; color: white; } 
+
+/*------ homepage end css------ */
+
+/* ------footer css start---- */
+.footerBottom p{font-size: 15px;font-family: KumbhSans-Light;}
+.footerBottom ul li{display: inline-block;padding-left: 30px;font-size: 14px;font-family: KumbhSans-Light;}
+.footerBottom ul li a:hover{color: var(--yellowColor);}
+.footerSection h5{font-size: 20px;font-family: KumbhSans-Bold;}
+.footerSection p{font-size: 15px;line-height: 21px;font-family: KumbhSans-Light;}
+.footerSection ul li{padding: 3px 0px;display: block;}
+.footerSection ul li a{font-size: 14px;font-family: KumbhSans-Medium;color: var(--grayColor);}
+.footerSection ul li a:hover{color: var(--yellowColor);}
+.footer{background-color: var(--yellowLightColor);}
+.footerInput input{border: none;height: 50px;padding-right: 110px;}
+.footerInput .subscribe{position: absolute;right: 15px;top: 15px;font-family: KumbhSans-Bold;}
+.footerInput .subscribe:hover{color: var(--yellowColor);}
+.footerUser li{display: inline-block !important;margin-right: 5px;}
+.footerUser li a{background-color: red;display: inline-block;height: 30px;width: 30px;line-height: 30px;text-align: center;border-radius: 50%;color: white !important;}
+.footerUser .facebook{background-color: #4472d9;}
+.footerUser .linkedin{background-color: #42639f;}
+.footerUser .instagram{background-color: #c20b3d;}
+.footerUser .twitter{background-color: #5894d9;}
+
+/* ------footer css end---- */
+
+.productBannerTop{background-image: url("../image/productBanner.png"); min-height: 377px; display: flex; justify-content: center; align-items: center;background-size: cover;background-position: center; } 
+.productBannerTop h1{ color: white; font-size: 50px; font-weight: 600; }
+
+
+.productSliderTwo{background-color: var(--lightGray);padding: 10px;border-radius: 20px;}
+.productSliderTwo img{max-height: 300px;}
+.productSlider .productSmalSlider{background-color: var(--lightGray);padding: 10px;border-radius: 20px;position: relative;display: flex;align-items: center;justify-content: center;}
+.productSlider .productSmalSlider img{height: 90px;object-fit: contain;}
+.productSlider .productSmalSlider .videoPlayIcon img{height: 30px;}
+.productSlider .swiper-slide {opacity: .5;}
+.productSlider .swiper-slide-thumb-active{opacity: 1;}
+
+.countNumber{ width: 100px; background-color: unset; padding: 10px; } 
+.productDec{ font-family: KumbhSans-Regular !important; font-size: 15px; line-height: 25px; }
+
+.ReviewWithImage{height: 100px;width: 100%;object-fit: cover; }
+.ReviewImageView{position: absolute;background-color: #000000b9;color: white;top: 0px;bottom: 0px;right: 0px;left: 0px;display: flex;align-items: center;justify-content: center;font-size: 20px;}
+
+
+.ReviewSection{padding: 25px 0px;border-top: 1px solid #ccc;}
+.ReviewSection .reviewSProfile{height: 45px;width: 45px;border-radius: 50%;object-fit: cover;}
+.ReviewSection p{font-size: 15px;font-family: KumbhSans-SemiBold;margin-top: 6px;line-height: 22px;}
+.ReviewSection h3{font-size: 18px;	font-family: KumbhSans-Regular;}
+
+.ReviewCardIMG{position: relative;background-color: white;padding: 10px;margin-top: 20px;}
+.ReviewCardIMG .cardReview{height: 100px;width: 100%;object-fit: cover;border-radius: 12px;position: relative;}
+.ReviewCardIMG .videoPlay_Icon{position: absolute;top: 0px;bottom: 0px;right: 0px;left: 0px;background-color: rgba(0, 0, 0, 0.539);border-radius: 12px;border: none;}
+.ReviewCardIMG .video_Icon{height: 30px;width: 30px;}
+
+.billingForm{ margin-top: 20px; } 
+.billingForm input.form-control{ background-color: unset; border: none; border-bottom: 1px solid #00000080; height: 50px; min-height: 50px; border-radius: 0px; padding: 0px 3px !important; font-size: 20px; } 
+.billingForm textarea.form-control{ border-radius: 0px; padding: 18px 3px !important; font-size: 18px; background-color: unset; border: none; border-bottom: 1px solid #00000080; } 
+.billingForm textarea.form-control:focus{ box-shadow: none; } 
+.billingForm.form-floating>.form-control:not(:placeholder-shown)~label::after,
+.billingForm.form-floating>.form-control:not(:placeholder-shown)~label{ background-color: var(--yellowLightColor); } 
+.billingForm input::placeholder{ color: #00000080; } 
+.billingForm.form-floating>label{ padding: 0px; height: auto; top: 10px; font-size: 20px; } 
+.billingForm.form-floating ::-webkit-input-placeholder { /* Edge */ color: var(--yellowLightColor) !important; } 
+.billingForm.form-floating :-ms-input-placeholder { /* Internet Explorer 10-11 */ color: var(--yellowLightColor) !important; } 
+.billingForm.form-floating ::placeholder { color: var(--yellowLightColor) !important; } 
+.billingForm input:focus{ box-shadow: none; } 
+.billingForm.form-floating>.form-control:focus~label{ transform: scale(.85) translateY(-1.5rem) translateX(0.15rem); } 
+.billingForm.form-floating>.form-control:not(:placeholder-shown)~label{ transform: scale(.85) translateY(-1.5rem) translateX(0.15rem); } 
+.billingForm.form-floating>.form-control:focus~label::after,.form-floating>.form-select~label::after{ background-color: var(--yellowLightColor) } 
+.billingForm .form-select{ background-color: unset; border: none; border-bottom: 1px solid #00000080; border-radius: 0px; padding: 4px 3px; font-size: 18px; } 
+.selectCustoms.billingForm.form-floating>label{ top: -5px; font-size: 20px; color: black; } 
+.billingForm .form-select:focus{ box-shadow: none; }
+
+.billingHeading{font-size: 40px;font-family: KumbhSans-SemiBold}
+
+.OrderSummary{ background-color: white; padding: 20px; border-radius: 10px; } 
+.OrderSummary ul li{ padding: 10px 0px; font-family: KumbhSans-Regular !important; font-size: 18px; } 
+.OrderSummary ul li span{ float: right; font-family: KumbhSans-Bold; } .OrderSummary h5{ font-family: KumbhSans-Bold; font-size: 20px; } 
+.OrderSummary h4{ font-family: KumbhSans-Bold; font-size: 24px; } .thankYouBg{ min-height: 600px; background-position: center; background-size: cover; } 
+.orderDetails{ background-color: white; padding: 20px 20px 0px 20px; border-radius: 10px; } 
+.orderDetails h6{ font-size: 16px; font-family: KumbhSans-SemiBold; } 
+.orderDetails p{ font-size: 16px; font-family: KumbhSans-Regular !important; margin-bottom: 15px; color: #494949; line-height: 21px; } 
+.OrderSumyThankyo{ background-color: white; padding: 20px; border-radius: 10px; } 
+.OrderSumyThankyo ul li{ padding: 10px 0px; font-family: KumbhSans-Regular !important; font-size: 16px; } 
+.OrderSumyThankyo ul li span{ float: right; font-family: KumbhSans-Bold; }
+
+
+.contactUsSection{ background-color: var(--yellowLightColor); } 
+.contactUsSection h1{ font-size: 35px; font-family: KumbhSans-Bold; } 
+.contactUsSection .billingForm input.form-control,.billingForm.form-floating>label{ font-size: 15px !important; font-family: KumbhSans-SemiBold; } 
+.googleMap{width: 100%;height: 550px} 
+.contactMain{ background-color: var(--yellowLightColor); } 
+.contactAddress img{ width: 48px; } 
+.contactAddress h6{ font-size: 15px; margin-top: 8px; font-family: Gilroy-Light; line-height: 20px; } 
+.contactAddress h5{ font-size: 19px; font-family: Gilroy-Bold; }
+
+
+.our-mission-panel h2{
+    margin-top: 20px;
+}
+.our-mission-panel p {
+    margin-top: 7px;
+    font-family: KumbhSans-Light;
+}
+.our-mission-panel ul {
+    padding-left: 13px;
+}
+.our-mission-panel li {
+    margin-bottom: 7px;
+}
+.our-mission-panel ol {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+
+.aboutusBanner{background-image: url("../image/img/aboutusBanner.png"); min-height: 377px; display: flex; justify-content: center; align-items: center;background-size: cover;background-position: center;position: relative;padding: 20px; } 
+.aboutusBanner::before {position: absolute; content: "";  height: 100%; background-color: rgba(0, 0, 0, 0.534); right: 0px; top: 0px;left: 0px;bottom: 0px;}
+.aboutusBanner h1{ color: white; font-size: 50px;font-family: KumbhSans-SemiBold; }
+.aboutusBanner p{ color: white; font-size:16px;line-height: 22px;font-family: KumbhSans-Regular;margin-top: 20px;}
+
+
+.OurStory h1{font-size: 30px;font-family: KumbhSans-SemiBold;}
+.OurStory p{font-size: 15px;margin-top: 20px;font-family: KumbhSans-Light;}
+.ourStroyEfter{position: absolute;right: -80px;bottom: -100px;z-index: -1;}
+.OurStorySection{margin-top: 70px;}
+
+
+.WhyChooseUs{background-color: var(--yellowLightColor);}
+
+.WhyChooseUsSection h1{
+font-family: Kumbh Sans;
+font-size: 30px;
+font-weight: 600;
+line-height: 25px;
+font-family: KumbhSans-SemiBold;
+}
+.WhyChooseUsCard{background-color: white;padding: 25px;text-align: center;margin-top: 15px;border-radius: 20px;}
+.WhyChooseUsCard img{height: 70px;}
+.WhyChooseUsCard h3{font-size: 20px;font-family: KumbhSans-SemiBold;;margin-top: 15px;}
+.WhyChooseUsCard p{    
+font-size: 15px;
+margin-top: 11px;
+font-family: KumbhSans-Light;}
+
+.Our_PromiseOverlay h1{
+background: #FFB90B;
+color: white;
+position: absolute;
+width: 263px;
+padding: 22px;
+bottom: 0px;
+right: 10px;
+font-size: 30px;
+font-family: KumbhSans-Bold;
+}
+
+
+.contactUsBottom{
+    background-image: url("../image/img/ContactUsBottom.png");
+    background-size: cover;
+    padding: 80px 15px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.contactUsBottom h1{
+font-family: KumbhSans-SemiBold;
+font-size: 40px;
+line-height: 25px;
+text-align: center;
+color: white;
+}
+
+.contactUsBottom p{
+font-family: KumbhSans-Regular;
+font-size: 20px;
+line-height: 25px;
+margin-top: 33px;
+color: white;
+}
+.contactUsBottom h5{
+font-family: KumbhSans-Bold;
+font-size: 25px;
+line-height: 30px;
+margin-top: 30px;
+color: white;
+}
+.contactUsBottom::before {position: absolute; content: "";  height: 100%; background-color:rgb(66 0 0 / 59%); right: 0px; top: 0px;left: 0px;bottom: 0px;}
